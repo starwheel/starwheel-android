@@ -14,7 +14,19 @@
 
 package net.omplanet.starwheel.ui.activity;
 
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+
 import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.cloud.backend.core.CloudBackendFragment;
+import net.omplanet.starwheel.cloud.backend.core.CloudBackendFragment.OnListener;
+import net.omplanet.starwheel.cloud.backend.core.CloudBackendMessaging;
+import net.omplanet.starwheel.cloud.backend.core.CloudCallbackHandler;
+import net.omplanet.starwheel.cloud.backend.core.CloudEntity;
+import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Order;
+import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Scope;
+import net.omplanet.starwheel.cloud.backend.core.Consts;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -35,19 +47,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.omplanet.starwheel.cloud.backend.core.CloudBackendFragment;
-import net.omplanet.starwheel.cloud.backend.core.CloudBackendMessaging;
-import net.omplanet.starwheel.cloud.backend.core.CloudCallbackHandler;
-import net.omplanet.starwheel.cloud.backend.core.CloudEntity;
-import net.omplanet.starwheel.cloud.backend.core.Consts;
-import net.omplanet.starwheel.cloud.backend.core.CloudBackendFragment.OnListener;
-import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Order;
-import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Scope;
 
 /**
  * Sample Guestbook app with Mobile Backend Starter.

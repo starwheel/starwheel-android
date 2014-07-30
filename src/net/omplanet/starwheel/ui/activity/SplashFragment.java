@@ -1,7 +1,6 @@
 package net.omplanet.starwheel.ui.activity;
 
 import net.omplanet.starwheel.R;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;

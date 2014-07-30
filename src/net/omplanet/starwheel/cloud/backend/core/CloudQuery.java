@@ -14,10 +14,10 @@
 
 package net.omplanet.starwheel.cloud.backend.core;
 
+import android.util.Base64;
+
 import com.google.cloud.backend.android.mobilebackend.model.QueryDto;
 import com.google.gson.Gson;
-
-import android.util.Base64;
 
 /**
  * A query object to execute it with {@link CloudBackend}. See

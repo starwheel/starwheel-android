@@ -1,19 +1,17 @@
 package net.omplanet.starwheel.ui.activity;
 
-import net.omplanet.starwheel.R;
+import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.Locale;
 
+import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.cloud.backend.core.CloudEntity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import java.text.SimpleDateFormat;
-import java.util.List;
-import java.util.Locale;
-
-import net.omplanet.starwheel.cloud.backend.core.CloudEntity;
 
 /**
  * This ArrayAdapter uses CloudEntities as items and displays them as a post in

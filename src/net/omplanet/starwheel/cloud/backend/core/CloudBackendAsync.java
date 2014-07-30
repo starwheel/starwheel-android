@@ -14,16 +14,6 @@
 
 package net.omplanet.starwheel.cloud.backend.core;
 
-import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
-
-import android.app.Activity;
-import android.app.Application;
-import android.app.Fragment;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Handler;
-import android.util.Log;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -33,6 +23,15 @@ import java.util.Map;
 import net.omplanet.starwheel.GCMIntentService;
 import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Order;
 import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Scope;
+import android.app.Activity;
+import android.app.Application;
+import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Handler;
+import android.util.Log;
+
+import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 
 /**
  * Cloud Backend API class that provides asynchronous APIs in addition to

@@ -14,8 +14,9 @@
 
 package net.omplanet.starwheel.cloud.backend.core;
 
-import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
+import java.util.List;
 
+import net.omplanet.starwheel.GCMIntentService;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.Fragment;
@@ -28,9 +29,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import java.util.List;
-
-import net.omplanet.starwheel.GCMIntentService;
+import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 
 /**
  * An {@link Fragment} class that allows hosting Activities to access the

@@ -14,12 +14,6 @@
 
 package net.omplanet.starwheel.cloud.backend.core;
 
-import com.google.api.client.util.DateTime;
-
-import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Date;
@@ -29,6 +23,11 @@ import java.util.Map;
 
 import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Order;
 import net.omplanet.starwheel.cloud.backend.core.CloudQuery.Scope;
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import com.google.api.client.util.DateTime;
 
 /**
  * Cloud Backend API class that provides pub/sub messaging feature in addition
