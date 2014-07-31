@@ -17,6 +17,7 @@ package net.omplanet.starwheel.cloud.backend.core;
 import java.util.List;
 
 import net.omplanet.starwheel.GCMIntentService;
+import net.omplanet.starwheel.NotificationUtil;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.Fragment;
@@ -58,10 +59,15 @@ public class CloudBackendFragment extends Fragment {
      */
     private BroadcastReceiver mMsgReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent) {
-            String token = intent.getStringExtra("token");
-            Log.i(Consts.TAG, "A message has been recieved of token: " + token);
-            mCloudBackend.handleQueryMessage(token);
+        public void onReceive(Context context, Intent intent) {          
+            if(CloudBackendFragment.this.isResumed()) { // The case when the fragment is the foreground.
+                String token = intent.getStringExtra("token");
+                Log.i(Consts.TAG, "CloudBackendFragment.onReceive: A message has been recieved of token: " + token);
+                mCloudBackend.handleQueryMessage(token);
+            } else { // The case when the app is running but in the background.
+                Log.i(Consts.TAG, "CloudBackendFragment.onReceive: A message has been recieved when the fragment is not visible.");
+            	NotificationUtil.generateNotification(CloudBackendFragment.this.getActivity(), intent);
+            }
         }
     };
 

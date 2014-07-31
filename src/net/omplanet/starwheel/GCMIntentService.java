@@ -15,25 +15,15 @@
 package net.omplanet.starwheel;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 import net.omplanet.starwheel.cloud.backend.core.Consts;
-import net.omplanet.starwheel.ui.activity.GuestbookActivity;
-import net.omplanet.starwheel.ui.activity.IntroductionActivity;
-import net.omplanet.starwheel.ui.utils.RoundedAvatarDrawable;
 import android.app.Application;
 import android.app.IntentService;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -89,10 +79,11 @@ public class GCMIntentService extends IntentService {
                     messageIntent.putExtras(intent);
                     messageIntent.putExtra("token", tokens[2]);
                     boolean isReceived = LocalBroadcastManager.getInstance(this).sendBroadcast(messageIntent);
-                    //TODO consider improving
+                    
+                    //Send push notification if the application did not receive the broadcast.
                     if (!isReceived) {
                         Log.i(Consts.TAG, "A message has been recieved but no broadcast was handled.");
-                        generateNotification(this, intent, tokens[2]);
+                        NotificationUtil.generateNotification(this, intent);
                     } else {
                         Log.i(Consts.TAG, "A message has been recieved, broadcasted and handled.");
                     }
@@ -101,123 +92,6 @@ public class GCMIntentService extends IntentService {
         }
         // Release the wake lock provided by the WakefulBroadcastReceiver.
         GCMBroadcastReceiver.completeWakefulIntent(intent);
-    }
-    
-    public static void generateNotification(Context context, Intent intent, String message) {
-		//Event keys
-		HashMap data = new HashMap();
-		for (String key : intent.getExtras().keySet()) {
-			Log.d(Consts.TAG, "Message key: " + key + " value: " + intent.getExtras().getString(key));
-			String eventKey = key.startsWith("data.") ? key.substring(5) : key;
-			data.put(eventKey, intent.getExtras().getString(key));
-		}
-
-		CharSequence contentTitle = (CharSequence) data.get("updatedBy");
-		if (contentTitle == null) contentTitle = "New Message";
-		
-		CharSequence contentText = (CharSequence) data.get("message");
-		if (contentText == null) contentText = "";
-		
-		CharSequence userId = (CharSequence) data.get("updatedBy");
-		Bitmap iconBitmap = getUserIcon(context, userId.toString());
-		if (iconBitmap == null) iconBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcher);
-
-		// the next lines initialize the Notification, using the configurations above
-/*
-		Notification notification = new Notification(icon, tickerText, when);
-
-		// Custom
-		CharSequence vibrate = (CharSequence) data.get("vibrate");
-		CharSequence sound = (CharSequence) data.get("sound");
-
-		if("default".equals(sound)) {
-			Log.e(Consts.TAG, "Notification: DEFAULT_SOUND");
-		    notification.defaults |= Notification.DEFAULT_SOUND;
-		} 
-		else if(sound != null) {
-
-			Log.e(Consts.TAG, "Notification: sound "+sound);
-
-			String[] packagename = new String[]{"",""};//systProp.getString("com.activate.gcm.component", "").split("/");
-
-			String baseDir = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
-			String path = baseDir + "/"+ packagename[0] +"/sound/"+sound; 
- 
- 			Log.e(Consts.TAG, path);
-
-			File file = new File(path);
-
-			Log.i(Consts.TAG,"Sound exists : " + file.exists());
-
-			if (file.exists()) {
-				Uri soundUri = Uri.fromFile(file);
-		    	notification.sound = soundUri;
-			}
-			else {
-		    	notification.defaults |= Notification.DEFAULT_SOUND;
-			}
-		}
-
-		if(vibrate != null) {
-			notification.defaults |= Notification.DEFAULT_VIBRATE;
-		}
-
-		notification.defaults |= Notification.DEFAULT_LIGHTS;
-
-		notification.flags = Notification.FLAG_AUTO_CANCEL;
-		//notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
-*/		
-		
-		// Creates an Intent for the Activity
-//    	Intent launcherintent = new Intent("android.intent.action.MAIN");
-//		launcherintent.setFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-//		Intent notificationIntent = new Intent(context, GCMIntentService.class);
-//		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, launcherintent, 0);
-		
-		// Creates an Intent for the Activity
-		Intent resultIntent = new Intent(context, GuestbookActivity.class);
-		// The stack builder object will contain an artificial back stack for the started Activity.
-		// This ensures that navigating backward from the Activity leads out of
-		// your application to the Home screen.
-		TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-		// Adds the back stack for the Intent (but not the Intent itself)
-		stackBuilder.addParentStack(IntroductionActivity.class);
-		// Adds the Intent that starts the Activity to the top of the stack
-		stackBuilder.addNextIntent(resultIntent);
-		PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-		
-		
-		Notification.Builder mBuilder = new Notification.Builder(context);
-		mBuilder.setContentIntent(resultPendingIntent);
-
-		Notification notification = mBuilder
-		.setContentTitle(contentTitle)
-        .setContentText(contentText)
-        .setSmallIcon(R.drawable.notification_icon)
-        .setLargeIcon(iconBitmap)
-        .setTicker(contentTitle + ": " + contentText)
-        .setWhen(System.currentTimeMillis())
-        .setAutoCancel(true)
-        .build();
-		
-		///Get the notification ID, /it allows to update the notification later on.
-		int notifyID = 1;
-		String contentID = (String) data.get("id");
-		if(contentID != null) {
-			notifyID = Integer.parseInt(contentID);
-		}
-		
-		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-		mNotificationManager.notify(notifyID, notification);
-    }
-    
-    private static Bitmap getUserIcon(Context context, String userId) {
-    	//TODO get real user icons
-    	if (userId != null && userId.contains("nacenonyx")) {
-    		return RoundedAvatarDrawable.getCroppedBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.user_no_icon));
-    	} else {
-        	return null;
-    	}
     }
 
     /**

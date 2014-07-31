@@ -34,6 +34,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -230,6 +231,8 @@ public class GuestbookActivity extends Activity implements OnListener {
         CloudEntity newPost = new CloudEntity("Guestbook");
         newPost.put(CloudBackendMessaging.BROADCAST_PROP_MESSAGE, mMessageTxt.getText().toString());
 
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.send_message);
+        
         // create a response handler that will receive the result or an error
         CloudCallbackHandler<CloudEntity> handler = new CloudCallbackHandler<CloudEntity>() {
             @Override
@@ -239,6 +242,8 @@ public class GuestbookActivity extends Activity implements OnListener {
                 mMessageTxt.setText("");
                 mMessageTxt.setEnabled(true);
                 mSendBtn.setEnabled(true);
+                // stop playing
+                mp.release();
             }
 
             @Override
@@ -251,6 +256,8 @@ public class GuestbookActivity extends Activity implements OnListener {
         mProcessingFragment.getCloudBackend().insert(newPost, handler);
         mMessageTxt.setEnabled(false);
         mSendBtn.setEnabled(false);
+        // play sound
+        mp.start();
     }
 
     /**
