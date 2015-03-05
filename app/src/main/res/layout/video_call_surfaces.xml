@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ooVoo.oovoosample.VideoCall.VCParticipantsController xmlns:android="http://schemas.android.com/apk/res/android"
+<net.omplanet.starwheel.ooVoo.VideoCall.VCParticipantsController xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/participants_controller"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.ooVoo.oovoosample.Common.ParticipantVideoSurface
+    <net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface
         android:id="@+id/preview_layout_id"
         android:layout_width="0px"
         android:layout_height="match_parent"
@@ -53,9 +53,9 @@
             android:text="@string/title_me"
             android:textColor="@android:color/white" />
 
-    </com.ooVoo.oovoosample.Common.ParticipantVideoSurface>
+    </net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface>
 
-    <com.ooVoo.oovoosample.Common.ParticipantVideoSurface
+    <net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface
         android:id="@+id/user1_layout_id"
         android:layout_width="0px"
         android:layout_height="match_parent"
@@ -104,9 +104,9 @@
             android:visibility="invisible" 
             android:singleLine="true"
             android:gravity="center"/>
-    </com.ooVoo.oovoosample.Common.ParticipantVideoSurface>
+    </net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface>
 
-    <com.ooVoo.oovoosample.Common.ParticipantVideoSurface
+    <net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface
         android:id="@+id/user2_layout_id"
         android:layout_width="0px"
         android:layout_height="match_parent"
@@ -155,9 +155,9 @@
             android:singleLine="true"
             android:gravity="center" >
         </android:TextView>
-    </com.ooVoo.oovoosample.Common.ParticipantVideoSurface>
+    </net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface>
 
-    <com.ooVoo.oovoosample.Common.ParticipantVideoSurface
+    <net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface
         android:id="@+id/user3_layout_id"
         android:layout_width="0px"
         android:layout_height="match_parent"
@@ -207,6 +207,6 @@
             android:singleLine="true"
             android:gravity="center">
         </android:TextView>
-    </com.ooVoo.oovoosample.Common.ParticipantVideoSurface>
+    </net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface>
 
-</com.ooVoo.oovoosample.VideoCall.VCParticipantsController>
+</net.omplanet.starwheel.ooVoo.VideoCall.VCParticipantsController>

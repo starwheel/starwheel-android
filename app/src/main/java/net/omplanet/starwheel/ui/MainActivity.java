@@ -28,19 +28,19 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.ooVoo.oovoosample.ConferenceManager;
-import com.ooVoo.oovoosample.ConferenceManager.SessionListener;
+import net.omplanet.starwheel.ooVoo.ConferenceManager;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionListener;
 import net.omplanet.starwheel.R;
 
-import com.ooVoo.oovoosample.SessionUIPresenter;
-import com.ooVoo.oovoosample.Common.AlertsManager;
-import com.ooVoo.oovoosample.Common.ParticipantHolder.RenderViewData;
-import com.ooVoo.oovoosample.Common.ParticipantVideoSurface;
-import com.ooVoo.oovoosample.Common.ParticipantsManager;
-import com.ooVoo.oovoosample.Common.Utils;
-import com.ooVoo.oovoosample.Settings.SettingsActivity;
-import com.ooVoo.oovoosample.Settings.UserSettings;
-import com.ooVoo.oovoosample.VideoCall.VideoCallActivity;
+import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
+import net.omplanet.starwheel.ooVoo.Common.AlertsManager;
+import net.omplanet.starwheel.ooVoo.Common.ParticipantHolder.RenderViewData;
+import net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface;
+import net.omplanet.starwheel.ooVoo.Common.ParticipantsManager;
+import net.omplanet.starwheel.ooVoo.Common.Utils;
+import net.omplanet.starwheel.ooVoo.Settings.SettingsActivity;
+import net.omplanet.starwheel.ooVoo.Settings.UserSettings;
+import net.omplanet.starwheel.ooVoo.VideoCall.VideoCallActivity;
 import com.oovoo.core.IConferenceCore.ConferenceCoreError;
 
 // Main presenter entity

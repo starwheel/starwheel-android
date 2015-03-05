@@ -80,7 +80,7 @@
         android:text="@string/avsIp"
         android:textAppearance="?android:attr/textAppearanceSmall" /> -->
 
-	<com.ooVoo.oovoosample.Common.ParticipantVideoSurface
+	<net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface
 	        android:id="@+id/preview_layout_id"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
@@ -130,7 +130,7 @@
             android:text="@string/title_me"
             android:textColor="@android:color/white" />
 
-	</com.ooVoo.oovoosample.Common.ParticipantVideoSurface>
+	</net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface>
     
     <Button
         android:id="@+id/joinButton1"

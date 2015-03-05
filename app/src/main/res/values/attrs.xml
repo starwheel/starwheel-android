@@ -12,4 +12,5 @@
         <attr name="layout_x" format="dimension" />
         <attr name="layout_y" format="dimension" />
     </declare-styleable>
+
 </resources>

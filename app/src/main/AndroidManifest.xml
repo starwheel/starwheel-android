@@ -40,24 +40,24 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name="com.ooVoo.oovoosample.Settings.SettingsActivity"
+            android:name=".ooVoo.Settings.SettingsActivity"
             android:label="@string/settings_screen_name" >
         </activity>
         <activity
-            android:name="com.ooVoo.oovoosample.Information.InformationActivity"
+            android:name=".ooVoo.Information.InformationActivity"
             android:label="@string/information_screen_name" >
         </activity>
         <activity
-            android:name="com.ooVoo.oovoosample.VideoCall.VideoCallActivity"
+            android:name=".ooVoo.VideoCall.VideoCallActivity"
             android:label="@string/video_call_screen_name" >
         </activity>
         <activity
-            android:name="com.ooVoo.oovoosample.Alerts.AlertsActivity"
+            android:name=".ooVoo.Alerts.AlertsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_alerts" >
         </activity>
         <activity
-            android:name="com.ooVoo.oovoosample.Messenger.MessengerActivity"
+            android:name=".ooVoo.Messenger.MessengerActivity"
             android:label="@string/messenger_screen_name" >
         </activity>
 
