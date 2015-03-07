@@ -39,10 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.714286" vertical-offset="51" max-vertical-offset="1717">
+            <state vertical-scroll-proportion="-0.8376812" vertical-offset="612" max-vertical-offset="1717">
               <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -63,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircleImageView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CircleImageView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/view/CircleImageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4691689" vertical-offset="2579" max-vertical-offset="4624">
+            <state vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="4624">
               <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
@@ -98,14 +98,14 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.555555" vertical-offset="232" max-vertical-offset="1343">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state vertical-scroll-proportion="-12.185185" vertical-offset="232" max-vertical-offset="1343">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
               <folding>
-                <element signature="e#1881#1903#0" expanded="true" />
-                <element signature="e#1941#1963#0" expanded="true" />
-                <element signature="e#1999#2020#0" expanded="true" />
-                <element signature="e#2059#2080#0" expanded="true" />
-                <element signature="e#2110#2133#0" expanded="true" />
+                <element signature="e#1863#1885#0" expanded="true" />
+                <element signature="e#1923#1945#0" expanded="true" />
+                <element signature="e#1981#2002#0" expanded="true" />
+                <element signature="e#2041#2062#0" expanded="true" />
+                <element signature="e#2092#2115#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1280,10 +1280,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/fragmentview_strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_grid_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/GridViewFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1787,7 +1787,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2195,16 +2195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.714286" vertical-offset="51" max-vertical-offset="1717">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2222,23 +2212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.555555" vertical-offset="232" max-vertical-offset="1343">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <element signature="e#1881#1903#0" expanded="true" />
-            <element signature="e#1941#1963#0" expanded="true" />
-            <element signature="e#1999#2020#0" expanded="true" />
-            <element signature="e#2059#2080#0" expanded="true" />
-            <element signature="e#2110#2133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/GridViewFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9285715" vertical-offset="1318" max-vertical-offset="4998">
@@ -2251,9 +2224,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/view/CircleImageView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4691689" vertical-offset="2579" max-vertical-offset="4624">
+        <state vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="4624">
           <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.185185" vertical-offset="232" max-vertical-offset="1343">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="e#1863#1885#0" expanded="true" />
+            <element signature="e#1923#1945#0" expanded="true" />
+            <element signature="e#1981#2002#0" expanded="true" />
+            <element signature="e#2041#2062#0" expanded="true" />
+            <element signature="e#2092#2115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/omplanet/starwheel/ui/navigation/slidingtabs/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8376812" vertical-offset="612" max-vertical-offset="1717">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

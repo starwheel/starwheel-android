@@ -17,7 +17,7 @@ public class MainActivity extends SampleActivityBase {
     // Whether the details Fragment is currently shown
     private boolean mDetailsShown = false;
     // The current radius of the grid view
-    private int mCurrentRadius = 1;
+    private int mCurrentRadius = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
