@@ -1,7 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="net.omplanet.starwheel.ui.MainActivity" >
+    tools:context="net.omplanet.starwheel.ui.MainOoVooActivity" >
+	<item android:id="@+id/menu_toggle_details"
+          android:showAsAction="always"
+          android:title="@string/sample_show_details" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"

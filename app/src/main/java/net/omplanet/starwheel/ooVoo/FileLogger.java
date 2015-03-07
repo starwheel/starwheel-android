@@ -1,19 +1,18 @@
 package net.omplanet.starwheel.ooVoo;
 
-import java.lang.Thread;
-import java.util.concurrent.SynchronousQueue;
-import java.util.Calendar;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.FileNotFoundException;
-import java.text.SimpleDateFormat;
-
 import android.util.Log;
 
-import com.oovoo.core.ILoggerListener;
 import com.oovoo.core.IConferenceCore.LogLevel;
+import com.oovoo.core.ILoggerListener;
 import com.oovoo.core.Utils.AppUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.SynchronousQueue;
 
 public class FileLogger implements ILoggerListener, Runnable {
 

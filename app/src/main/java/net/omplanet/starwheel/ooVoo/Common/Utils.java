@@ -14,9 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import net.omplanet.starwheel.StarwheelSettings;
-
 import com.oovoo.core.Utils.MethodUtils;
+
+import net.omplanet.starwheel.StarwheelSettings;
 
 import java.util.List;
 

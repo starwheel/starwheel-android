@@ -10,9 +10,10 @@ package net.omplanet.starwheel.ooVoo.Common;
 
 import android.util.Log;
 
-import net.omplanet.starwheel.ooVoo.Common.ParticipantHolder.VideoParticipant;
 import com.oovoo.core.ConferenceCore.FrameSize;
 import com.oovoo.core.IConferenceCore.ConferenceCoreError;
+
+import net.omplanet.starwheel.ooVoo.Common.ParticipantHolder.VideoParticipant;
 
 import java.util.ArrayList;
 import java.util.Collection;

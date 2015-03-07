@@ -19,10 +19,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import net.omplanet.starwheel.ooVoo.ConferenceManager;
-import net.omplanet.starwheel.R;
-
 import com.oovoo.core.IConferenceCore.LogLevel;
+
+import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.ooVoo.ConferenceManager;
 
 import java.util.List;
 

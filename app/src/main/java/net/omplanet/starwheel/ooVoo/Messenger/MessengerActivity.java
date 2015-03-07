@@ -9,9 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import net.omplanet.starwheel.R;
 import net.omplanet.starwheel.ooVoo.Common.Utils;
 import net.omplanet.starwheel.ooVoo.ConferenceManager;
-import net.omplanet.starwheel.R;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

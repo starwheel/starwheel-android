@@ -7,10 +7,6 @@
 //
 package net.omplanet.starwheel.ooVoo.VideoCall;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -32,12 +28,13 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import net.omplanet.starwheel.ooVoo.ConferenceManager;
-import net.omplanet.starwheel.ooVoo.ConferenceManager.ParticipantSwitchListener;
-import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionControlsListener;
-import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionListener;
-import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionParticipantsListener;
-import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
+import com.oovoo.core.ConferenceCore;
+import com.oovoo.core.ConferenceCore.FrameSize;
+import com.oovoo.core.IConferenceCore.CameraResolutionLevel;
+import com.oovoo.core.IConferenceCore.ConferenceCoreError;
+import com.oovoo.core.device.deviceconfig.VideoFilterData;
+
+import net.omplanet.starwheel.R;
 import net.omplanet.starwheel.ooVoo.Alerts.AlertsActivity;
 import net.omplanet.starwheel.ooVoo.Common.AlertsManager;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantHolder;
@@ -46,17 +43,20 @@ import net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface.States;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantsManager;
 import net.omplanet.starwheel.ooVoo.Common.Utils;
+import net.omplanet.starwheel.ooVoo.ConferenceManager;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.ParticipantSwitchListener;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionControlsListener;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionListener;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionParticipantsListener;
 import net.omplanet.starwheel.ooVoo.Information.InformationActivity;
 import net.omplanet.starwheel.ooVoo.Messenger.MessengerActivity;
 import net.omplanet.starwheel.ooVoo.Messenger.MessengerController;
+import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
 import net.omplanet.starwheel.ooVoo.Settings.UserSettings;
-import com.oovoo.core.ConferenceCore;
-import com.oovoo.core.ConferenceCore.FrameSize;
-import com.oovoo.core.IConferenceCore.CameraResolutionLevel;
-import com.oovoo.core.IConferenceCore.ConferenceCoreError;
-import com.oovoo.core.device.deviceconfig.VideoFilterData;
 
-import net.omplanet.starwheel.R;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 
 // Video presenter entity
 public class VideoCallActivity extends Activity implements OnClickListener,

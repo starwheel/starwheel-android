@@ -7,22 +7,22 @@
 //
 package net.omplanet.starwheel.ooVoo.Common;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.opengl.GLSurfaceView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
 
-import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
-import com.oovoo.core.ConferenceCore;
 import com.oovoo.core.ClientCore.VideoChannelPtr;
+import com.oovoo.core.ConferenceCore;
 import com.oovoo.core.ui.PreviewVideoRenderer;
 import com.oovoo.core.ui.VideoRenderer;
 
 import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ParticipantHolder {
 	

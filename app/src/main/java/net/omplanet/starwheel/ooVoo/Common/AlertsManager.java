@@ -7,14 +7,14 @@
 //
 package net.omplanet.starwheel.ooVoo.Common;
 
+import android.util.Log;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import android.util.Log;
 public class AlertsManager {
 	private static final String TAG = AlertsManager.class.getSimpleName();
 	

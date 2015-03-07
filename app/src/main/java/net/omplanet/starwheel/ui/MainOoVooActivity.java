@@ -28,26 +28,26 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import net.omplanet.starwheel.ooVoo.ConferenceManager;
-import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionListener;
-import net.omplanet.starwheel.R;
+import com.oovoo.core.IConferenceCore.ConferenceCoreError;
 
-import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
+import net.omplanet.starwheel.R;
 import net.omplanet.starwheel.ooVoo.Common.AlertsManager;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantHolder.RenderViewData;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantVideoSurface;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantsManager;
 import net.omplanet.starwheel.ooVoo.Common.Utils;
+import net.omplanet.starwheel.ooVoo.ConferenceManager;
+import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionListener;
+import net.omplanet.starwheel.ooVoo.SessionUIPresenter;
 import net.omplanet.starwheel.ooVoo.Settings.SettingsActivity;
 import net.omplanet.starwheel.ooVoo.Settings.UserSettings;
 import net.omplanet.starwheel.ooVoo.VideoCall.VideoCallActivity;
-import com.oovoo.core.IConferenceCore.ConferenceCoreError;
 
 // Main presenter entity
-public class MainActivity extends Activity implements OnClickListener,
+public class MainOoVooActivity extends Activity implements OnClickListener,
 		SessionListener, SessionUIPresenter {
 
-	private static final String TAG = MainActivity.class.getName();
+	private static final String TAG = MainOoVooActivity.class.getName();
 	private ConferenceManager mConferenceManager = null;
 	private EditText mSessionIdView = null;
 	private EditText mDisplayNameView = null;
@@ -70,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener,
 	protected void initView() {
 		Log.i(TAG, "Setup views ->");
 		// Set layout
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_main_oovoo);
 		// Register for button press
 		Object obj = findViewById(R.id.joinButton1);
 		mJoinButton = (Button) obj;
@@ -106,7 +106,7 @@ public class MainActivity extends Activity implements OnClickListener,
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
-	    inflater.inflate(R.menu.main_menu, menu);
+	    inflater.inflate(R.menu.oovoo_menu, menu);
 	    
 	    return true;
 	}
@@ -117,7 +117,7 @@ public class MainActivity extends Activity implements OnClickListener,
 			return false;
 
 		switch (item.getItemId()) {			
-			case R.id.menu_settings:
+			case R.id.action_settings:
 				if (!isInitialized) {
 					Toast.makeText(getApplicationContext(), R.string.initialization_wait, Toast.LENGTH_SHORT).show();
 				}
@@ -349,7 +349,7 @@ public class MainActivity extends Activity implements OnClickListener,
 			public void run() {
 				mJoinButton.setEnabled(true);
 				hideWaitingMessage(); 
-				Utils.ShowMessageBox(MainActivity.this, titleToShow, msgToShow);
+				Utils.ShowMessageBox(MainOoVooActivity.this, titleToShow, msgToShow);
 			}
 		});
 	}

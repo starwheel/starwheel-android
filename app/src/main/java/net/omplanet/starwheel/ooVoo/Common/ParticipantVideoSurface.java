@@ -15,9 +15,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import net.omplanet.starwheel.ooVoo.VideoCall.DynamicAbsoluteLayout;
-
 import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.ooVoo.VideoCall.DynamicAbsoluteLayout;
 
 public class ParticipantVideoSurface extends FrameLayout {
 	

@@ -15,12 +15,12 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.util.Log;
 
-import net.omplanet.starwheel.ooVoo.Common.Utils;
 import com.oovoo.core.IConferenceCore;
 import com.oovoo.core.IConferenceCore.CameraResolutionLevel;
 import com.oovoo.core.IConferenceCore.LogLevel;
 
 import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.ooVoo.Common.Utils;
 
 // Manages saving & loading of the UserSettings class
 public class UserSettingsManager 

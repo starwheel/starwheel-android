@@ -23,15 +23,15 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.oovoo.core.ConferenceCore.FrameSize;
+import com.oovoo.core.IConferenceCore.ConferenceCoreError;
+
+import net.omplanet.starwheel.R;
 import net.omplanet.starwheel.ooVoo.Common.Participant;
 import net.omplanet.starwheel.ooVoo.Common.ParticipantsManager;
 import net.omplanet.starwheel.ooVoo.Common.Utils;
 import net.omplanet.starwheel.ooVoo.ConferenceManager;
 import net.omplanet.starwheel.ooVoo.ConferenceManager.SessionParticipantsListener;
-import net.omplanet.starwheel.R;
-
-import com.oovoo.core.ConferenceCore.FrameSize;
-import com.oovoo.core.IConferenceCore.ConferenceCoreError;
 
 // Information presenter entity
 public class InformationActivity extends Activity implements SessionParticipantsListener

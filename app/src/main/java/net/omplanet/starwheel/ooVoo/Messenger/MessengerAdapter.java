@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import net.omplanet.starwheel.R;
 
-
 import java.util.ArrayList;
 
 public class MessengerAdapter extends BaseAdapter {

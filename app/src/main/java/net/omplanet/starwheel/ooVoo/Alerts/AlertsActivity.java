@@ -11,7 +11,6 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -21,9 +20,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import net.omplanet.starwheel.R;
 import net.omplanet.starwheel.ooVoo.Common.AlertsManager;
 import net.omplanet.starwheel.ooVoo.Common.IAlertsListener;
-import net.omplanet.starwheel.R;
 
 public class AlertsActivity extends Activity implements IAlertsListener {
 

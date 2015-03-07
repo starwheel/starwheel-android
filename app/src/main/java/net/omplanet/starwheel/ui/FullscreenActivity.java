@@ -1,8 +1,5 @@
 package net.omplanet.starwheel.ui;
 
-import net.omplanet.starwheel.R;
-import net.omplanet.starwheel.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,9 +12,9 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.widget.Toast;
 
-import java.io.IOException;
+import net.omplanet.starwheel.R;
+import net.omplanet.starwheel.util.SystemUiHider;
 
 
 /**
@@ -144,7 +141,7 @@ public class FullscreenActivity extends Activity implements SurfaceHolder.Callba
             @Override
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
-                Intent intent = new Intent(FullscreenActivity.this, LoginActivity.class);
+                Intent intent = new Intent(FullscreenActivity.this, net.omplanet.starwheel.ui.navigation.slidingtabs.MainActivity.class);
                 startActivity(intent);
                 finish();
             }
