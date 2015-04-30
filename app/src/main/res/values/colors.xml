@@ -1,5 +1,19 @@
 <resources>
+    <!--Color values for the borders, lines and images all over the app-->
+    <color name="main_text_color">#FFFFFFFF</color>
+    <color name="main_background_border_color">#FFFFFFFF</color>
+    <color name="main_background_contrast_color">#FF000000</color>
 
+    <!--Rainbow colors--> <!--alpha 0x55 = 85 = 255 * 0.33-->
+    <color name="rainbow_0">#FFFFFFFF</color> <!--Transparent-->
+    <color name="rainbow_1">#FFc11a34</color> <!--Aurasoma Red c11a34--> <!--Scarlet FF2400--> <!--Natural Red C40233--> <!--Flame E25822--> <!--Red ff0000-->
+    <color name="rainbow_2">#FFfd9c00</color> <!--Apricot fd9c00--> <!--Orange ff6600-->
+    <color name="rainbow_3">#FFFFD300</color> <!--Natural Yelow FFD300--> <!--Yellow ffee00-->
+    <color name="rainbow_4">#FF00a54f</color> <!--Aurasoma Green 00a54f--> <!--Natural Green 009F6B--> <!--Green 00ff00-->
+    <color name="rainbow_5">#FF0087BD</color> <!--Natural Blue 0087BD--> <!--Blue 0099ff-->
+    <color name="rainbow_6">#FF703AB6</color> <!--Violet 703AB6--> <!--Indigo #4400FF-->
+
+    <!--ooVoo Colors-->
     <color name="black_overlay">#66000000</color>
 	<color name="controller_grey">#EAEAEA</color>	
 	<color name="image_holder_bg">#EAEAEA</color>

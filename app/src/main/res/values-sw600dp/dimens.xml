@@ -5,4 +5,10 @@
          screen margins) for sw600dp devices (e.g. 7" tablets) here.
     -->
 
+    <!-- Grid view -->
+    <dimen name="action_button_middle">42dp</dimen>
+    <dimen name="action_button_large">49dp</dimen>
+    <dimen name="action_button_padding">7dp</dimen>
+    <dimen name="action_button_margin">14dp</dimen>
+
 </resources>

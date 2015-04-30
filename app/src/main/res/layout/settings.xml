@@ -103,87 +103,12 @@
 	        android:textIsSelectable="false" />
     
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/CamGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/TokenGroup" 
-        android:layout_marginTop="20dp" >
-
-        <TextView
-            android:id="@+id/cameraLabel"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.5"
-            android:text="@string/settings_camera"
-            android:textAppearance="?android:attr/textAppearanceSmall"  />
-
-        <Spinner
-            android:id="@+id/cameraSpinner"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.5" 
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/microphoneGrp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/CamGroup" 
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:id="@+id/microphoneLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.5"
-            android:text="@string/settings_mic" 
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <Spinner
-            android:id="@+id/microphoneSpinner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5" 
-            android:layout_gravity="center_vertical"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/speakerGrp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/microphoneGrp" 
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:id="@+id/speakersLabel"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.5"
-            android:text="@string/settings_speaker" 
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <Spinner
-            android:id="@+id/speakersSpinner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5" 
-            android:layout_gravity="center_vertical"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
-    </LinearLayout>
-   
+  
     <LinearLayout
         android:id="@+id/logGrp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/speakerGrp"
+        android:layout_below="@id/TokenGroup"
         android:layout_marginTop="20dp" >
 
         <TextView

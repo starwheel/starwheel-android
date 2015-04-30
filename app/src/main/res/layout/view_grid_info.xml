@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_info_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView android:id="@+id/grid_info_text_scrollview"
+        style="@style/Widget.SampleMessageTile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/grid_info_text"
+            style="@style/Widget.SampleMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/horizontal_page_margin"
+            android:paddingRight="@dimen/horizontal_page_margin"
+            android:paddingTop="@dimen/vertical_page_margin"
+            android:paddingBottom="@dimen/vertical_page_margin"
+            android:textColor="@color/main_text_color"/>
+    </ScrollView>
+
+</RelativeLayout>

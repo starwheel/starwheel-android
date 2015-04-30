@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <View
+        android:id="@+id/gridLevelButton4"
+        android:layout_width="@dimen/action_button_middle"
+        android:layout_height="@dimen/action_button_middle"
+        android:layout_gravity="center"
+        android:background="@drawable/zoom_level_4"
+        android:padding="@dimen/action_button_padding"
+        android:layout_margin="@dimen/action_button_margin" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@color/main_background_border_color"
+        android:alpha="@dimen/main_alpha_strong"/>
+
+<!--    <View
+        android:id="@+id/gridLevelButton3"
+        android:layout_width="@dimen/action_button_size"
+        android:layout_height="@dimen/action_button_size"
+        android:layout_gravity="center"
+        android:background="@drawable/zoom_level_3"
+        android:padding="@dimen/action_button_padding"
+        android:layout_margin="@dimen/action_button_margin" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@color/main_background_border_color"
+        android:alpha="@dimen/main_alpha_strong"/>-->
+
+    <View
+        android:id="@+id/gridLevelButton1"
+        android:layout_width="@dimen/action_button_middle"
+        android:layout_height="@dimen/action_button_middle"
+        android:layout_gravity="center"
+        android:background="@drawable/zoom_level_1"
+        android:padding="@dimen/action_button_padding"
+        android:layout_margin="@dimen/action_button_margin" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@color/main_background_border_color"
+        android:alpha="@dimen/main_alpha_strong"/>
+
+    <View
+        android:id="@+id/gridLevelButton0"
+        android:layout_width="@dimen/action_button_middle"
+        android:layout_height="@dimen/action_button_middle"
+        android:layout_gravity="center"
+        android:background="@drawable/zoom_level_0"
+        android:padding="@dimen/action_button_padding"
+        android:layout_margin="@dimen/action_button_margin" />
+</LinearLayout>

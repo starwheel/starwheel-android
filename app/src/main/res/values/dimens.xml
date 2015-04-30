@@ -1,14 +1,34 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- ooVoo - Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-	
 	<dimen name="activity_padding">16dp</dimen>
     <dimen name="vc_surface_text_height">26dp</dimen>
     <dimen name="vc_surface_margin">5dp</dimen>
+    <dimen name="vc_surface_padding">5dp</dimen>
     <dimen name="vc_controller_height">55dip</dimen>
     <dimen name="vc_controller_button_size">42dip</dimen>
     <dimen name="main_row_height">40dip</dimen>
     <dimen name="main_row_label_width">120dip</dimen>
     <dimen name="main_row_text_width">220dip</dimen>
+	
+	<!-- Grid view -->
+    <dimen name="action_button_middle">28dp</dimen>
+    <dimen name="action_button_large">34dp</dimen>
+    <dimen name="action_button_padding">6dp</dimen>
+    <dimen name="action_button_margin">6dp</dimen>
+
+    <!-- Other -->
+    <dimen name="list_item_height">72dp</dimen>
+
+    <!--Alpha values for the borders, lines and images all over the app-->
+    <!--<dimen name="main_alpha_strong">0.33px</dimen>-->
+    <!--<dimen name="main_alpha_middle">0.55px</dimen>-->
+    <!--<dimen name="main_alpha_weak">0.77px</dimen>-->
+
+    <!--Alpha values for the borders, lines and images all over the app-->
+    <item name="main_alpha_strong" format="float" type="dimen">0.33</item>
+    <item name="main_alpha_middle" format="float" type="dimen">0.55</item>
+    <item name="main_alpha_weak" format="float" type="dimen">0.77</item>
+
 </resources>

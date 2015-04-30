@@ -2,91 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.omplanet.starwheel" >
 
-    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <!-- ooVoo: Tell the system this app requires OpenGL ES 2.0. -->
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
-
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:hardwareAccelerated="true">
-        <meta-data
-            android:name="AppId"
-            android:value="\ 12349983352245" /> <!-- Please insert App Id here -->
-        <meta-data
-            android:name="AppToken"
-            android:value="\ MDAxMDAxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9tYboMcpVCwtZmF7eIm%2FLF%2BWCkr00fjtcef3S89AbP0C%2B6zvXqK0Psk9E6yuz68LQtKUVTFRIuRRUiS1UwH6cqEEiPTBFQL6CIRmaEDJ2zgbXvZCGR1qrpQ8faDLKpBE%3D" /> <!-- Please insert App Token here -->
-
-        <activity
-            android:name=".ui.FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".ui.navigation.slidingtabs.MainActivity"
-            android:label="@string/app_name">
-        </activity>
-
-        <activity
-            android:name=".ui.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
-            android:name=".ui.MainOoVooActivity"
-            android:label="@string/title_activity_main" >
-        </activity>
-        <activity
-            android:name=".ooVoo.Settings.SettingsActivity"
-            android:label="@string/settings_screen_name" >
-        </activity>
-        <activity
-            android:name=".ooVoo.Information.InformationActivity"
-            android:label="@string/information_screen_name" >
-        </activity>
-        <activity
-            android:name=".ooVoo.VideoCall.VideoCallActivity"
-            android:label="@string/video_call_screen_name" >
-        </activity>
-        <activity
-            android:name=".ooVoo.Alerts.AlertsActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_alerts" >
-        </activity>
-        <activity
-            android:name=".ooVoo.Messenger.MessengerActivity"
-            android:label="@string/messenger_screen_name" >
-        </activity>
-
-        <!--  Phone State listener -->
-        <receiver android:name="com.oovoo.core.phone.CallReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver>
-    </application>
 
     <!-- ooVoo permission. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.RECORD_VIDEO" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+   	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -94,5 +30,89 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".MainApplication"
+        android:hardwareAccelerated="true">
+        <!-- ooVoo -->
+        <meta-data
+            android:name="AppId"
+            android:value="\ 12349983352245" /> <!-- Please insert App Id here -->
+        <meta-data
+            android:name="AppToken"
+            android:value="\ MDAxMDAxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9tYboMcpVCwtZmF7eIm%2FLF%2BWCkr00fjtcef3S89AbP0C%2B6zvXqK0Psk9E6yuz68LQtKUVTFRIuRRUiS1UwH6cqEEiPTBFQL6CIRmaEDJ2zgbXvZCGR1qrpQ8faDLKpBE%3D" /> <!-- Please insert App Token here -->
+        <!-- Google Maps -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBzuP_4bhdroFyDnfoQPAgljOpbt6NtCSA"/>
+
+        <activity
+            android:name=".ui.activity.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/title_activity_main">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+        <activity
+            android:name=".ui.activity.OoVooActivity"
+            android:label="@string/title_activity_oovoo"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name=".ooVoo.Settings.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".ooVoo.Information.InformationActivity"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name=".ooVoo.VideoCall.VideoCallActivity"
+            android:label="@string/title_activity__video_call"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <!--  Phone State listener -->
+        <receiver android:name="com.oovoo.core.phone.CallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+				<action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+			</intent-filter>
+        </receiver>
+
+        <!-- Audio Route -->
+        <receiver android:name="com.oovoo.core.phone.AudioRouteManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+    </application>
 
 </manifest>

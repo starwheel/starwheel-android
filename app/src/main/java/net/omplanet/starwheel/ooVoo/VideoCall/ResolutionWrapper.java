@@ -9,39 +9,39 @@ package net.omplanet.starwheel.ooVoo.VideoCall;
 
 import com.oovoo.core.IConferenceCore.CameraResolutionLevel;
 
-public class ResolutionWrapper {
-	public CameraResolutionLevel Level;
-	public String FriendlyName;
-	
-	public ResolutionWrapper(CameraResolutionLevel level, String friendlyName)
+public class ResolutionWrapper 
+{
+	public static CameraResolutionLevel fromInt( int e)
 	{
-		Level=level;
-		FriendlyName=friendlyName;
-	}
-	
-	@Override
-	public String toString() {
-		return FriendlyName;
-	}
-	
-	// Check for equality of IDs
-		@Override
-		public boolean equals(Object o) 
+		switch( e)
 		{
-			// Check is same instance	
-			if (this == o) 
-			{
-			  return true;
-			}
-			
-			// Return false if the other object has the wrong type.
-			if (!(o instanceof ResolutionWrapper)) 
-			{
-			  return false;
-			}
-			
-			// Check equality
-			ResolutionWrapper toCompare = (ResolutionWrapper) o;		
-			return (Level == toCompare.Level);
+		case 0:
+			return CameraResolutionLevel.ResolutionLow;
+		case 1:
+			return CameraResolutionLevel.ResolutionMedium;
+		case 2:
+			return CameraResolutionLevel.ResolutionHigh;
+		case 3:
+			return CameraResolutionLevel.ResolutionHD;
+		default:
+			return CameraResolutionLevel.ResolutionMedium;
 		}
+	}
+	
+	public static int toInt( CameraResolutionLevel e)
+	{
+		switch( e)
+		{
+		case ResolutionLow:
+			return 0;
+		case ResolutionMedium:
+			return 1;
+		case ResolutionHigh:
+			return 2;
+		case ResolutionHD:
+			return 3;
+		default:
+			return 1;
+		}
+	}
 }

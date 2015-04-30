@@ -139,7 +139,6 @@ public class DynamicAbsoluteLayout extends ViewGroup {
 
 	/**
 	 * Per-child layout information associated with DynamicAbsoluteLayout. See
-	 * {@link android.R.styleable#AbsoluteLayout_Layout Absolute Layout
 	 * Attributes} for a list of all child view attributes that this class
 	 * supports.
 	 */

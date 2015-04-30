@@ -1,42 +1,95 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Navigation Activity themes -->
+    <style name="Theme.Base" parent="android:Theme.Holo" />
 
-    </style> -->
-
-    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@null</item>
+    <style name="AppTheme" parent="Theme.Base">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!--<item name="android:actionBarItemBackground">@android:color/transparent</item>-->
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.MyApp</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.MyApp</item>
+        <item name="android:actionBarWidgetTheme">@style/DropDownListView.MyApp</item>
     </style>
 
-    <!-- Navigation Activity themes -->
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/underline_transparent_033</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:subtitleTextStyle">@style/MyActionBarSubTitleText</item>
+    </style>
 
-    <style name="Theme.Base" parent="android:Theme.Holo.Light" />
+    <!-- ActionBar title/subtitle texts -->
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+    <style name="MyActionBarSubTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
 
-    <style name="Theme.Sample" parent="Theme.Base" />
+    <!-- The background color for Action Bar menu -->
+    <style name="DropDownListView.MyApp" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_myapp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
 
-    <style name="AppTheme" parent="Theme.Sample" />
+    <style name="PopupMenu.MyApp" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/selectable_background_myapp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+
+    <style name="DropDownNav.Myapp" parent="@android:style/Widget.Holo.Light.Spinner">
+        <!--<item name="android:background">@drawable/spinner_background_ab_myapp</item>-->
+        <!--<item name="android:popupBackground">@drawable/menu_dropdown_panel_myapp</item>-->
+        <item name="android:dropDownSelector">@drawable/selectable_background_myapp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+
     <!-- Widget styling -->
-
     <style name="Widget" />
 
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="MyActionBar.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.MyApp</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.MyApp</item>
+    </style>
+
     <style name="Widget.SampleMessage">
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
         <item name="android:lineSpacingMultiplier">1.1</item>
     </style>
 
     <style name="Widget.SampleMessageTile">
-        <item name="android:background">@drawable/tile</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:shadowColor">#7F000000</item>
         <item name="android:shadowDy">-3.5</item>
         <item name="android:shadowRadius">2</item>
     </style>
 
     <!-- CirceImageView -->
-    <declare-styleable name="CircleImageView">
+    <declare-styleable name="CircleBorderedNetworkImageView">
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
 
+	
+	<!-- Fullscreen Activity themes -->
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+		<item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+	<!-- ooVoo -->
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
 </resources>

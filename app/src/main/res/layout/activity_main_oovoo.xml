@@ -1,9 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" 
-    android:padding="@dimen/activity_padding"
-    android:background="@drawable/demo">
-
+    android:padding="@dimen/activity_padding">
+<!--
     <TextView
         android:id="@+id/sessionIdSettingsLabel"
         android:layout_width="@dimen/main_row_label_width"
@@ -46,7 +45,7 @@
         android:inputType="text"
         android:singleLine="true" 
         android:textAppearance="?android:attr/textAppearanceSmall" />
-    
+    -->
     <!-- <TextView
         android:id="@+id/UserIDLabel"
         android:layout_width="@dimen/main_row_label_width"
@@ -84,22 +83,19 @@
 	        android:id="@+id/preview_layout_id"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
-	        android:layout_marginBottom="70dp"
-	        android:layout_below="@+id/displayNameLabel">
+	        android:layout_centerInParent="true">
 	        
 	    <ImageView
             android:id="@+id/myAvatar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/vc_surface_margin"
             android:src="@drawable/an_im_vc_place_holder"
             android:background="@color/image_holder_bg" />
 	    
-		<android.opengl.GLSurfaceView
+		<com.oovoo.core.ui.ooVooSdkGLSurfaceView
 	            android:id="@+id/myVideoSurface"
 	            android:layout_width="match_parent"
 	            android:layout_height="match_parent"
-	            android:layout_margin="@dimen/vc_surface_margin"
 	            android:visibility="invisible" />
 
         <android:TextView
@@ -108,7 +104,6 @@
             android:layout_height="match_parent"
             android:padding="20dp"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/vc_surface_margin"
             android:background="@android:color/black"
             android:gravity="center"
             android:textColor="@android:color/white" 
@@ -121,9 +116,6 @@
             android:layout_height="@dimen/vc_surface_text_height"
             android:layout_alignParentBottom="true"
             android:layout_gravity="top"
-            android:layout_marginBottom="@dimen/vc_surface_margin"
-            android:layout_marginLeft="@dimen/vc_surface_margin"
-            android:layout_marginRight="@dimen/vc_surface_margin"
             android:background="@drawable/white_name_border"
             android:gravity="center"
             android:singleLine="true"

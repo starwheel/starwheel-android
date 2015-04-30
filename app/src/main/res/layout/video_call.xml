@@ -52,29 +52,32 @@
         	android:layout_gravity="center_vertical"        
        	 	android:cropToPadding="true"
        	 	android:keepScreenOn="true" />
-
-        <Spinner
-            android:id="@+id/resolutionSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_toRightOf="@id/endOfCallButton" />
+        
+        <Button
+            android:id="@+id/resolutionButton"
+            android:layout_width="@dimen/vc_controller_button_size"
+            android:layout_height="@dimen/vc_controller_button_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/endOfCallButton"
+            android:background="@drawable/resolution_selector" />
+        
+        <Button
+            android:id="@+id/audioRoutesButton"
+            android:layout_width="@dimen/vc_controller_button_size"
+            android:layout_height="@dimen/vc_controller_button_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/resolutionButton"
+            android:background="@drawable/speakers_selector" />
         
         <Spinner
             android:id="@+id/filterSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:layout_toRightOf="@id/resolutionSpinner" 
+            android:layout_toRightOf="@id/resolutionButton" 
             android:visibility="gone" />
-        
-        <Button
-            android:id="@+id/bubbleButton"
-            android:layout_width="@dimen/vc_controller_button_size"
-            android:layout_height="@dimen/vc_controller_button_size"
-            android:background="@drawable/bubble_selector" 
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dip"/>
 
     </RelativeLayout>
 

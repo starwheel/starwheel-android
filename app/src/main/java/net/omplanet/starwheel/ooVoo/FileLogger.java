@@ -1,18 +1,19 @@
 package net.omplanet.starwheel.ooVoo;
 
-import android.util.Log;
-
-import com.oovoo.core.IConferenceCore.LogLevel;
-import com.oovoo.core.ILoggerListener;
-import com.oovoo.core.Utils.AppUtils;
-
+import java.lang.Thread;
+import java.util.concurrent.SynchronousQueue;
+import java.util.Calendar;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.concurrent.SynchronousQueue;
+
+import android.util.Log;
+
+import com.oovoo.core.ILoggerListener;
+import com.oovoo.core.IConferenceCore.LogLevel;
+import com.oovoo.core.Utils.AppUtils;
 
 public class FileLogger implements ILoggerListener, Runnable {
 
@@ -83,29 +84,29 @@ public class FileLogger implements ILoggerListener, Runnable {
 	{
 		switch(level)
 		{
-		case Fatal:
-			logFatal(level, tag, message);
-			break;
+			case Fatal:
+				logFatal(level, tag, message);
+				break;
 
-		case Error:
-			logError(level, tag, message);
-			break;
+			case Error:
+				logError(level, tag, message);
+				break;
 
-		case Warning:
-			logWarning(level, tag, message);
-			break;
+			case Warning:
+				logWarning(level, tag, message);
+				break;
 
-		case Info:
-			logInfo(level, tag, message);
-			break;
+			case Info:
+				logInfo(level, tag, message);
+				break;
 
-		case Trace:
-			logTrace(level, tag, message);
-			break;
+			case Trace:
+				logTrace(level, tag, message);
+				break;
 
-		case Debug:
-		default:
-			logDebug(level, tag, message);
+			case Debug:
+			default:
+				logDebug(level, tag, message);
 		}
 	}
 
@@ -113,9 +114,8 @@ public class FileLogger implements ILoggerListener, Runnable {
 	{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH.mm.ss");
 
-		
+
 		String sLogDirPath = AppUtils.getAppLogDir();
-		//String fileName = "ooVooSampleLogFile_" + dateFormat.format(Calendar.getInstance().getTime()) + "_" + timeFormat.format(Calendar.getInstance().getTime()) + ".txt";
 		String fileName = AppUtils.getAppName() + "_" + dateFormat.format(Calendar.getInstance().getTime()) + ".txt";
 
 		try {

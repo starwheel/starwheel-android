@@ -151,7 +151,7 @@ public class CommandQueued extends Thread {
 	 * 
 	 * @param object
 	 *            message object
-	 * @see com.oovoo.utils.EventObject
+	 * @see net.omplanet.starwheel.ooVoo.util.EventObject
 	 */
 	public void sendMessage(EventObject object) {
 

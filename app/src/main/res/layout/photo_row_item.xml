@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dp"
+    android:background="@drawable/underline_transparent_033">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/itemPhotoImageView"
+        android:layout_width="@dimen/action_button_large"
+        android:layout_height="@dimen/action_button_large"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/itemPhotoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="10dp"
+        android:textColor="@color/main_background_contrast_color"
+        android:background="@color/main_background_border_color"
+        android:textIsSelectable="false"
+        android:visibility="gone"/>
+</RelativeLayout>
